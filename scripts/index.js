@@ -1,4 +1,6 @@
 $(function(){
+    //Setting lang for moment.js
+    moment.locale('uk');
     // Adding handler for inputCityName button
     $('#btnGetWeather').click(function () {
         getWeatherByCity('ua', dataReceived, showError, $('#inputCityName').val());
