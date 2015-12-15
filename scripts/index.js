@@ -21,7 +21,7 @@ $(function(){
 
         $.each(data.list, function(){
             // "this" holds weather object from this source: http://openweathermap.org/forecast16
-            var localTime = new Date(this.dt - offset); // конвертуємо час з UTC у локальний
+            var localTime = new Date(this.dt*1000 - offset); // конвертуємо час з UTC у локальний
             addWeather(
                 this.weather[0].icon,
                 moment(localTime).calendar(),	// Використовуємо moment.js для представлення дати
